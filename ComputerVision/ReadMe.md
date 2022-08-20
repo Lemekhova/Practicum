@@ -19,3 +19,5 @@
 *Keras*
 *Seaborn*
 *Matplotlib*
+
+Используемые модели: *ResNet50*
