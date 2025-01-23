@@ -1,38 +1,34 @@
-# Рекомендация тарифов
+# Tariff Recommendation  
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.  
 
-## Данные
+## Data  
 
-Исходные данные - данные о поведении клиентов, которые перешли на новые тарифы.
+The initial data includes customer behavior data for those who switched to new tariffs.  
 
-Каждый объект в наборе данных — это информация о поведении одного пользователя за месяц. 
+Each entry in the dataset represents information about one user's behavior over a month:  
 
-- количество звонков,
+- Number of calls,  
+- Total call duration in minutes,  
+- Number of SMS messages,  
+- Internet usage in MB,  
+- Tariff used during the month ("Ultra" — 1, "Smart" — 0).  
 
-- суммарная длительность звонков в минутах,
+## Objective  
 
-- количество sms-сообщений,
+**Client:** Mobile operator "Megaline."  
 
-- израсходованный интернет-трафик в Мб,
+**Goal:** Develop a system capable of analyzing customer behavior and recommending a suitable tariff: "Smart" or "Ultra."  
 
-- каким тарифом пользовался в течение месяца («Ультра» — 1, «Смарт» — 0).
+**Task:** Build a classification model to select the appropriate tariff. The model should achieve an accuracy score of at least 0.75. Verify the accuracy on the test dataset.  
 
-## Задача
+## Conclusions  
 
-Заказчик - оператор мобильной связи «Мегалайн».
+The analysis revealed a correlation between the number of calls and the total call duration. During the modeling phase, several models were evaluated. Among them, the Random Forest classification model demonstrated the best performance, achieving an accuracy score of 0.81 on the test dataset.  
 
-Цель - построить систему, способную проанализировать поведение клиентов и предложить пользователям новый тариф: «Смарт» или «Ультра».
+## Libraries Used  
 
-Задача - построить модель для задачи классификации, которая выберет подходящий тариф.
-
-Постройть модель с максимально большим значением accuracy 0.75. Проверить accuracy на тестовой выборке.
-
-## Выводы
-В ходе анализа можно увидеть корреляцию между звонками и потраченными минутами. Далее, в ходе моделирования рассмотрено несколько моделей, из которых модель классификации "Случайный лес" показала лучшее качество и показала местрику Accuracy на тестовой выборке 0,81.
-
-## Используемые библиотеки
-*Pandas*
-*Matplotlib*
-*Sklearn*
+*Pandas*  
+*Matplotlib*  
+*Sklearn*  
