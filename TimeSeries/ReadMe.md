@@ -1,34 +1,37 @@
-# Прогнозирование заказов такси
+# Taxi Orders Forecasting  
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.  
 
-## Данные
+## Data  
 
-- Количество заказов
+- Number of taxi orders  
 
-## Задача
+## Objective  
 
-Заказчик — Компания «Чётенькое такси».
+**Client:** "Chyotenkoye Taxi" Company  
 
-Цель: привлекать больше водителей в период пиковой нагрузки.
+**Goal:** Attract more drivers during peak demand periods.  
 
-Необходимо: Постройте модель для предсказания количества заказов такси на следующий час.
+**Task:** Build a model to predict the number of taxi orders for the next hour.  
 
-## Выводы
-В ходе работы были рассмотрены несколько моделей.
-Лучше всего на валидационных данных проявила себя модель градиентного бустинга LGBMRegressor при большем количестве признаков.
-Данные были разбиты на валидационную и тестовую выборки последовательно, где тестовая выборка представлена конечной частью временного ряда.
-В связи с этим, модель показала метрику RMSE на тестовой выборке хуже, чем RMSE на валидационной выборке, а график временного среднего значения количества заказов такси вконце "ползет" вверх и является менее стационарным временным рядом в отличие от более ранних показателей.
+## Conclusions  
 
-## Используемые библиотеки
-*Pandas*
-*Sklearn*
-*statsmodels*
-*Lightgbm*
-*Matplotlib*
+Several models were considered during the project.  
+The gradient boosting model *LGBMRegressor* performed best on the validation dataset when more features were included.  
+The data was split sequentially into validation and test datasets, with the test dataset representing the final portion of the time series.  
+As a result, the model showed worse RMSE on the test dataset than on the validation dataset. Additionally, the graph of the time-series moving average of taxi orders at the end trends upward, making it a less stationary time series compared to earlier data.  
 
-## Используемые модели
-*LGBMRegressor*
-*LinearRegression*
-*RandomForestClassifier*
+## Libraries Used  
+
+*Pandas*  
+*Sklearn*  
+*statsmodels*  
+*Lightgbm*  
+*Matplotlib*  
+
+## Models Used  
+
+*LGBMRegressor*  
+*LinearRegression*  
+*RandomForestClassifier*  
