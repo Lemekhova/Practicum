@@ -1,63 +1,51 @@
-# Отток клиентов
+# Customer Churn  
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.  
 
-## Данные
+## Data  
 
-Нам предоставлены исторические данные о поведении клиентов банка и расторжении договоров с банком.
+We were provided with historical data on customer behavior and contract terminations with the bank.  
 
-Признаки:
+Features:  
 
-- индекс строки в данных
+- row index in the data  
+- unique client ID  
+- last name  
+- credit rating  
+- country of residence  
+- gender  
+- age  
+- number of years the client has been with the bank  
+- account balance  
+- number of bank products used by the client  
+- presence of a credit card  
+- client activity  
+- estimated salary  
 
-- уникальный идентификатор клиента
+Target Feature:  
 
-- фамилия
+- client churn (whether the client left the bank)  
 
-- кредитный рейтинг
+## Objective  
 
-- страна проживания
+**Client:** "Beta-Bank"  
 
-- пол
+Clients started leaving the bank every month. Bank marketers calculated that retaining current clients is cheaper than acquiring new ones.  
 
-- возраст
+The goal is to predict whether a client will leave the bank soon or not.  
 
-- сколько лет человек является клиентом банка
+## Conclusions  
+Three classification models were evaluated: Decision Tree, Linear Regression, and Random Forest. The most suitable parameters were selected to achieve maximum accuracy.  
 
-- баланс на счёте
+By balancing the dataset with different methods, it was determined that the Random Forest classification model, balanced by undersampling, gives the most accurate result that meets the task requirements.  
 
-- количество продуктов банка, используемых клиентом
+## Libraries Used  
+*Pandas*  
+*Sklearn*  
+*Numpy*  
 
-- наличие кредитной карты
-
-- активность клиента
-
-- предполагаемая зарплата
-
-Целевой признак:
-
-- факт ухода клиента
-
-## Задача
-
-Заказчик - «Бета-Банк». 
-
-Из банка стали уходить клиенты. Каждый месяц. Банковские маркетологи посчитали: сохранять текущих клиентов дешевле, чем привлекать новых.
-
-Нужно спрогнозировать, уйдёт клиент из банка в ближайшее время или нет. 
-
-## Выводы
-В работе было рассмотрено три модели классификации: дерево решений, линейная регрессия и случайный лес. С подбором наиболее подходящих параметров, которые выдают максимальную точность.
-
-Путем баллансировки различными методами было определено, что модель классификации случайный лес, сбаллансрованная путем уменьшения выборки, дает наиболее точный результат, который соответсвует заданию.
-
-## Используемые библиотеки
-*Pandas*
-*Sklearn*
-*Numpy*
-
-## Используемые модели
-*DecisionTreeClassifier*
-*LogisticRegression*
-*RandomForestClassifier*
+## Models Used  
+*DecisionTreeClassifier*  
+*LogisticRegression*  
+*RandomForestClassifier*  
