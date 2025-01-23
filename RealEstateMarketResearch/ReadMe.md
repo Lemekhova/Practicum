@@ -1,43 +1,41 @@
-# Исследование объявлений о продаже квартир
+# Analysis of Apartment Sale Listings
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status
+The project is fully completed. Finished.
 
-## Данные
+## Data
+- Distance to the nearest airport in meters (m)
+- Number of balconies
+- Ceiling height (m)
+- Distance to the city center (m)
+- Number of days the listing was posted (from publication to removal)
+- Publication date
+- Floor
+- Total number of floors in the building
+- Apartment (boolean)
+- Kitchen area in square meters (m²)
+- Price at the time of removal from publication
+- Living area in square meters (m²)
+- Name of the locality
+- Open floor plan (boolean)
+- Number of parks within a 3 km radius
+- Distance to the nearest park (m)
+- Number of water bodies within a 3 km radius
+- Distance to the nearest water body (m)
+- Number of rooms
+- Studio apartment (boolean)
+- Total apartment area in square meters (m²)
+- Number of photos in the listing
+- Objective
+- Determine key parameters.
 
-- расстояние до ближайшего аэропорта в метрах (м)
-- число балконов
-- высота потолков (м)
-- расстояние до центра города (м)
-- сколько дней было размещено объявление (от публикации до снятия)
-- дата публикации
-- этаж
-- всего этажей в доме
-- апартаменты (булев тип)
-- площадь кухни в квадратных метрах (м²)
-- цена на момент снятия с публикации
-- жилая площадь в квадратных метрах (м²)
-- название населённого пункта
-- свободная планировка (булев тип)
-- число парков в радиусе 3 км
-- расстояние до ближайшего парка (м)
-- число водоёмов в радиусе 3 км
-- расстояние до ближайшего водоёма (м)
-- число комнат
-- квартира-студия (булев тип)
-- площадь квартиры в квадратных метрах (м²)
-- число фотографий квартиры в объявлении
+## Findings
+The project analyzed the provided data on apartment sales in Saint Petersburg. Among other insights, the following patterns were identified:
 
-## Задача
-Определить параметры.
-
-## Выводы
-В проекте были проанализированы представленные данные о продаже квартир в Санкт-Петербурге. Среди прочих были выявлены следующие закономерности:
-- Средний срок продажи квартиры - пол года. Продажу можно считать долгой, если срок размещения объявления составляет более 8 месяцев.
-- Квартирой в центре можно считать квартиру, расположенную в радиусе 8-10 км от центра города.
-- Большинство квартир в центре имеют высоту потолков 3 м, тогда как в общем по региону этот параметр составляет 2,5м.
-- Первый этаж дешевле чем любой другой, последние этажи выше всего в цене. Однако, первый этаж в центре сильно дешевле прочих, а разница последнего и других этажей небольшая, в отличие от общих данных.
-- Количество однокомнатных и двукомнатных квартир преобладает, но в центре чаще встречаются двух- и трехкомнатные квартиры.
-
-## Используемые библиотеки
+- The average time to sell an apartment is six months. A sale can be considered slow if the listing is active for more than 8 months.
+- An apartment is considered central if it is located within an 8-10 km radius of the city center.
+- Most central apartments have ceilings 3 meters high, whereas the regional average is 2.5 meters.
+- Apartments on the first floor are cheaper than on any other floor, and top-floor apartments are the most expensive. However, in the city center, the first floor is significantly cheaper, while the price difference for top floors and other floors is smaller compared to the overall data.
+- One- and two-room apartments dominate the market, but in the city center, two- and three-room apartments are more common.
+## Libraries Used
 *Pandas*
