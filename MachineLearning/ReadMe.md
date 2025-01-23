@@ -1,35 +1,36 @@
-# Выбор локации для скважины
+# Selecting a Location for a Well  
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.  
 
-## Данные
+## Data  
 
-Данные геологоразведки трёх регионов:
+Geological exploration data for three regions:  
 
-- уникальный идентификатор скважины
+- Unique well identifier  
+- Three feature values for each point (their exact meanings are irrelevant, but the features themselves are significant)  
+- Volume of reserves in the well (thousands of barrels)  
 
-- три признака точек (неважно, что они означают, но сами признаки значимы)
+## Objective  
 
-- объём запасов в скважине (тыс. баррелей)
+**Client:** Oil extraction company "GlavRosGosNeft."  
 
-## Задача
+**Initial Data:** Oil samples from three regions, each containing 10,000 oil fields where the quality and reserves of oil were measured.  
 
-Заказчик - добывающая компания «ГлавРосГосНефть». 
+**Goal:** Determine where to drill a new well.  
 
-Исходные данные - пробы нефти в трёх регионах: в каждом 10 000 месторождений, где измерили качество нефти и объём её запасов.
+**Task:** Build a machine learning model to identify the region where extraction will yield the highest profit. Analyze potential profit and risks using the *Bootstrap* technique.  
 
-Цель - нужно решить, где бурить новую скважину.
+## Conclusions  
 
-Задача - построить модель машинного обучения, которая поможет определить регион, где добыча принесёт наибольшую прибыль. Проанализировать возможную прибыль и риски техникой *Bootstrap.*
+Three regions of oil wells were analyzed. Based on the actual production volume data, models were trained to predict oil production. Using predictions, 200 of the most productive wells were selected from 500 randomly chosen wells in each region. The actual revenues from these 200 wells were then estimated. The analysis led to conclusions regarding the profitability of each region.  
 
-## Выводы
-В работе были расммотрены три региона разрабатываемых скважин. На основе данных по реальному объему добычи были обучены модели по прогнозу добычи нефти. Согласно предсказаниям были отобраны 200 наиболее продуктивных скважин из 500 случайно выбранных в каждом регионе, и оценены реальные доходы с указанных 200 скважин. На основе чего был сделан вывод о прибыльности того или иного региона выработок.
+## Libraries Used  
 
-## Используемые библиотеки
-*Pandas*
-*Sklearn*
-*Numpy*
+*Pandas*  
+*Sklearn*  
+*Numpy*  
 
-## Используемые техники
-*Bootstrap*
+## Techniques Used  
+
+*Bootstrap*  
