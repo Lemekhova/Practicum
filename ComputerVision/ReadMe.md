@@ -1,33 +1,38 @@
-# Определение возраста покупателей
+# Predicting Final Properties of New Materials (Composite Materials). Selecting the Best Model.
 
-## Статус проекта 
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.
 
-## Данные
+## Data  
 
-Данные взяты с сайта ChaLearn Looking at People.
-В нашем распоряжении одна папка со всеми изображениями и csv-файл с двумя колонками: file_name и real_age.
+The dataset contains information about the initial properties of composite material components (amount of binder, filler, curing temperature, etc.).
 
-## Задача
+## Objective  
 
-Заказчик — Сетевой супермаркет «Хлеб-Соль».
+**Goal:** Predict the final properties of composite materials.  
+**Task:** Select the best model for determining the final properties of composite materials.
 
-Цель: Определить потенциальных клиентов, готовых уйти. Если выяснится, что пользователь планирует уйти, ему будут предложены промокоды и специальные условия. Команда оператора собрала персональные данные о некоторых клиентах, информацию об их тарифах и договорах.
+## Conclusions  
 
-Необходимо: построить модель прогнозирования оттока клиентов, на основе которой будут определяться клиенты, готовые уйти.
+To predict five characteristics of the composite material based on its components and formation methods, four models were evaluated: Linear Regression, Random Forest, Gradient Boosting, and a Neural Network.
 
-## Выводы 
-В задачи работы входили анализ исходных данных и создание модели по определению возраста клиентов супермаркета «Хлеб-Соль» по фотографиям.
-Обучение модели было произведено в GPU-тренажёре.
-Для обучения модели применялась сверточная сеть. В модели использовались арихитектура ResNet с отсеченной верхушкой, которая была дополнена слоями GlobalAveragePooling2D() и Dense (всего 3 слоя). При этом Dense в настройках на выходе определяем один нейрон с целью получить на выходе только одно значение возраста для одной фотографии, настройка активации выбрана activation='relu' как подходящая для задачи регресии. Алгоритм обучения модели в данной конструкции - градиентный спуск. Для определения шага градиентного спуска был выбран алгоритм Adam. Опытным путем был определен шаг 0,0001. При компилировании модели функция потерь была выбрана 'mse', т.к. с ней модель обучается быстрее.
-Таким образом, требуемых результатов качества модели удалось получить с выше перечисленными настройками на 3 эпохах обучения. В итоге, модель для распознавания возраста по фотографиям имеет метрику MAE на тестовой выборке - 6.34.
+Among the models, the Neural Network showed the highest accuracy. However, due to the dataset size, it performed inconsistently and didn’t always provide reliable predictions.
 
-## Используемые библиотеки
+The second most accurate model was Linear Regression. Moreover, during testing, the Linear Regression model consistently outperformed the Neural Network in accuracy.
 
-*Pandas*
-*Keras*
-*Seaborn*
-*Matplotlib*
+Based on these findings, it is recommended to use the Linear Regression model for further work.
 
-## Используемые модели: 
-*ResNet50*
+## Libraries Used  
+
+*Pandas*  
+*Keras*  
+*LightGBM*  
+*Matplotlib*  
+*Sklearn*  
+
+## Models Used  
+
+*LinearRegression*  
+*RandomForestRegressor*  
+*LGBMRegressor*  
+*Sequential*  
