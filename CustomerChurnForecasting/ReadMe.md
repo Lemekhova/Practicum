@@ -1,61 +1,67 @@
-# Прогнозирование оттока клиентов для оператора связи «Ниединогоразрыва.ком»
+# Customer Churn Prediction for the Telecommunications Provider "NoDropCalls.com"
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.
 
-## Данные
+## Data  
 
-- Информация о договоре
- - дата начала обслуживания
- - дата окончания обслуживания
- - тип договара (помесячная оплата, оплата за 1 год, оплата за 2 года)
- - електронное выставление счетов
- - способ оплаты
- - стоимость обслуживания за месяц
- - общая стоимость обслуживания
+- **Contract Information**  
+  - Start date of service  
+  - End date of service  
+  - Type of contract (monthly payment, 1-year plan, 2-year plan)  
+  - Electronic billing  
+  - Payment method  
+  - Monthly service cost  
+  - Total service cost  
 
-- Персональные данные клиента
- - пол
- - наличие пенсионного статуса по возрасту
- - наличие супруга(и)
- - наличие иждевенцев
+- **Customer Personal Data**  
+  - Gender  
+  - Senior citizen status  
+  - Presence of a spouse  
+  - Dependents  
 
-- Информация об интернет-услугах
- - интернет обслуживание
- - блокировка небезопасных сайтов
- - облачное хранилище файлов для резервного копирования данных
- - антивирус
- - выделенная линия технической поддержки
- - стриминговое телевидение
- - каталог фильмов
+- **Internet Service Information**  
+  - Internet service  
+  - Blocking unsafe websites  
+  - Cloud file backup  
+  - Antivirus  
+  - Dedicated technical support line  
+  - Streaming TV  
+  - Movie catalog  
 
-- Информация об услугах телефонии
- - наличие возможности ведения параллельных линий во время звонка
+- **Telephony Service Information**  
+  - Availability of parallel call lines  
 
-## Задача
+## Objective  
 
-Заказчик — Оператор связи «Ниединогоразрыва.ком».
+**Client:** Telecommunications provider "NoDropCalls.com."  
 
-Цель: Определить потенциальных клиентов, готовых уйти. Если выяснится, что пользователь планирует уйти, ему будут предложены промокоды и специальные условия. Команда оператора собрала персональные данные о некоторых клиентах, информацию об их тарифах и договорах.
+**Goal:** Identify potential customers likely to churn. If a customer is identified as planning to leave, they will be offered promo codes and special conditions. The telecom provider's team has collected personal data, tariff details, and contract information for some of their customers.  
 
-Необходимо: построить модель прогнозирования оттока клиентов, на основе которой будут определяться клиенты, готовые уйти.
+**Task:** Build a churn prediction model to identify customers who are likely to leave.  
 
-## Выводы
-В работе был проведен анализ данных, который показал, что клиенты стали уходить только 4 месяца назад (с октября 2019). А также, была выявлена связь между ежемесячным платежом клиента и его способностью расторгнуть довор. Длительность осблуживания, как показало дальнейшее моделирование, очень весомый фактор.
-В качестве признаков для дальнейшего обучения моделей была отобрана только часть исходных данных и был добавлен новый признак - длительность обслуживания клиента.
-Далее были рассмотрены четыре модели, из которых наиболее качественные результаты дала модель градиентного бустинга LGBMClassifier.
-Рекомендация компании - пересмотреть сетку ежемесячных тарифов для более эффективного удержания клиентов и проанализировать изменения, внесенные в тарифы или политику компании, начиная с сентября 2019 года, если такие были, либо определить сторонные факторы, послужившие катализатором ухода клиентов начиная с октября 2019 года.
+## Conclusions  
 
-## Используемые библиотеки
-*Pandas*
-*Sklearn*
-*Seaborn*
-*Lightgbm*
-*Matplotlib*
-*Numpy*
+Data analysis revealed that customer churn only began four months ago (since October 2019). A correlation was identified between the monthly payment amount and a customer’s likelihood of terminating their contract. The duration of service was also found to be a significant factor during further modeling.  
 
-## Используемые модели
-*LogisticRegression*
-*RandomForestClassifier*
-*CatBoostClassifier*
-*LGBMClassifier*
+Only part of the initial dataset was used for training the models, and a new feature—customer service duration—was introduced.  
+
+Four models were evaluated, with the Gradient Boosting model (*LGBMClassifier*) delivering the most accurate results.  
+
+**Recommendation:** The company should review its monthly pricing structure to improve customer retention. Additionally, analyze any changes to tariffs or company policies starting from September 2019, if applicable, or identify external factors that may have contributed to customer churn beginning in October 2019.  
+
+## Libraries Used  
+
+*Pandas*  
+*Sklearn*  
+*Seaborn*  
+*LightGBM*  
+*Matplotlib*  
+*Numpy*  
+
+## Models Used  
+
+*LogisticRegression*  
+*RandomForestClassifier*  
+*CatBoostClassifier*  
+*LGBMClassifier*  
