@@ -1,56 +1,48 @@
-# Исследование закономерностей, определяющих успешность игры
+# Research on Patterns Determining Game Success  
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.  
 
-## Данные
+## Data  
 
-Доступны исторические данные о продажах игр, оценки пользователей и экспертов, жанры и платформы до 2016 года.
+Historical data is available on game sales, user and expert ratings, genres, and platforms up to 2016.  
 
-- название игры
+- Game title  
+- Platform  
+- Release year  
+- Game genre  
+- Sales in North America (millions of copies sold)  
+- Sales in Europe (millions of copies sold)  
+- Sales in Japan (millions of copies sold)  
+- Sales in other countries (millions of copies sold)  
+- Critics' score (maximum 100)  
+- Users' score (maximum 10)  
+- ESRB rating (Entertainment Software Rating Board), which determines the age category of games.  
 
-- платформа
+## Objective  
 
-- год выпуска
+**Client:** An international video game retailer.  
 
-- жанр игры
+**Goal:** Identify patterns that determine the success of a game.  
 
-- продажи в Северной Америке (миллионы проданных копий)
+**Task:** Analyze the provided data.  
 
-- продажи в Европе (миллионы проданных копий)
+## Conclusions  
 
-- продажи в Японии (миллионы проданных копий)
+During the analysis, the following insights were identified:  
+- The peak of sales and the number of active platforms occurred between 2006 and 2011. After this period, sales began to decline, and the number of platforms decreased.  
+- In 2016, the average sales volume was 4.6 million copies, compared to 14 million copies in 2015.  
+- Higher critic ratings correlate with higher sales volumes.  
+- The most popular and profitable genres among all users are action and sports.  
+- The most popular platforms among all buyers are PS2, PS3, and X360.  
+- The typical lifespan of a platform is approximately 7 years.  
+- The user profiles of North America and Europe are similar, while Japan's user profile differs significantly.  
+- Age ratings affect sales performance.  
 
-- продажи в других странах (миллионы проданных копий)
+## Libraries Used  
 
-- оценка критиков (максимум 100)
-
-- оценка пользователей (максимум 10)
-
-- рейтинг от организации ESRB (англ. Entertainment Software Rating Board). Эта ассоциация определяет рейтинг компьютерных игр и присваивает им подходящую возрастную категорию.
-
-## Задача
-
-Заказчик — международный магазин компьютерных игр. 
-
-Цель: выявить определяющие успешность игры закономерности.
-
-Необходимо: проанализировать представленные данные.
-
-## Выводы 
-В ходе анализа данных среди прочих были выявлены следующие особенности:
-- Пик продаж и количества существоваших платформ пришелся на период 2006-2011 гг, за тем продажи стали падать, а количество платформ сокращаться.
-- За 2016 год средний объем продаж составил 4,6 млн.копий, тогда как за 2015 он уже составил 14 млн.копий.
-- Чем выше рейтинг критиков, тем выше объемы продаж.
-- Наиболее популярные и прибыльные жанры среди всех пользователей - это экшн и спорт.
-- Наиболее популярные платформы среди всех покупателей - это PS2, PS3, X360.
-- Характерное время существования платформы примерно 7 лет.
-- Портрет пользователя Северной Америки и Европы схож в отличие от пользователя Японии.
-- Возрастной рейтинг влияет на продажи.
-
-## Используемые библиотеки
-*Pandas*
-*Matplotlib*
-*Numpy*
-*Pyplot*
-*Seaborn*
+*Pandas*  
+*Matplotlib*  
+*Numpy*  
+*Pyplot*  
+*Seaborn*  
