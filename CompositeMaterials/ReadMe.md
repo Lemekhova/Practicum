@@ -1,39 +1,38 @@
-# Прогнозирование конечных свойств новых материалов (композиционных материалов). Подбор лучшей модели.
+# Predicting Final Properties of New Materials (Composite Materials). Selecting the Best Model.
 
-## Статус проекта 
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.
 
-## Данные
+## Data  
 
-Представлены данные о начальных свойствах компонентов композиционных материалов (количество связующего, наполнителя, температурный режим отверждения и т.д.).
+The dataset contains information about the initial properties of composite material components (amount of binder, filler, curing temperature, etc.).
 
-## Задача
+## Objective  
 
-Цель: спрогнозировать ряд конечных свойств получаемых композиционных материалов.
+**Goal:** Predict the final properties of composite materials.  
+**Task:** Select the best model for determining the final properties of composite materials.
 
-Необходимо: выбрать лучшую модель для определения конечных свойств композиционных материалов.
+## Conclusions  
 
-## Выводы 
+To predict five characteristics of the composite material based on its components and formation methods, four models were evaluated: Linear Regression, Random Forest, Gradient Boosting, and a Neural Network.
 
-С целью прогнозирования пяти характеристик будущего композитного материала на основе его составляющих и методов формирования были рассмотрены 4 модели: модель линейной регерссии, случайного леса, градиентного бустинга и нейронной сети.
+Among the models, the Neural Network showed the highest accuracy. However, due to the dataset size, it performed inconsistently and didn’t always provide reliable predictions.
 
-В ходе рассмотрения наиболее точной себя проявила модель нйронной сети, однако на таком объеме данных она работает нестабильно и не каждый раз дает точные предстказания.
+The second most accurate model was Linear Regression. Moreover, during testing, the Linear Regression model consistently outperformed the Neural Network in accuracy.
 
-Следующая по точности себя проявила модель линейной регрессии. К тому же, при проверке на тестовой выборке модель линейной регрессии показывает значительно лучшие результаты, чем модель нейронной сети.
+Based on these findings, it is recommended to use the Linear Regression model for further work.
 
-В связи с описанным выше, можно сделать вывод о том, что в работу следует принимать модель линейной регрессии.
+## Libraries Used  
 
-## Используемые библиотеки
+*Pandas*  
+*Keras*  
+*LightGBM*  
+*Matplotlib*  
+*Sklearn*  
 
-*Pandas*
-*Keras*
-*lightgbm*
-*Matplotlib*
-*sklearn*
+## Models Used  
 
-## Используемые модели: 
-
-*LinearRegression*
-*RandomForestRegressor*
-*LGBMRegressor*
-*Sequential*
+*LinearRegression*  
+*RandomForestRegressor*  
+*LGBMRegressor*  
+*Sequential*  
