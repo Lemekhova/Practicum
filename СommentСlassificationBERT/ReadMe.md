@@ -1,43 +1,47 @@
-# Проект для «Викишоп» с BERT
+# Project for "Wikishop" with BERT  
 
-## Статус проекта
-Проект выполнен в полном объеме. Завершен.
+## Project Status  
+The project is fully completed. Finished.  
 
-## Данные
+## Data  
 
-Набор данных с разметкой о токсичности.
+A labeled dataset indicating toxicity:  
 
-- text - в нём содержит текст комментария
-- toxic — целевой признак
+- **text** — contains the comment text  
+- **toxic** — target label  
 
-## Задача
+## Objective  
 
-Заказчик — Интернет-магазину «Викишоп».
+**Client:** Online store "Wikishop"  
 
-Цель: создать инструмент, который будет искать токсичные комментарии и отправлять их на модерацию.
+**Goal:** Develop a tool to detect toxic comments and flag them for moderation.  
 
-Необходимо: обучить модель классифицировать комментарии на позитивные и негативные.
+**Task:** Train a model to classify comments as positive or negative.  
 
-Необходимо построить модель со значением метрики качества F1 не меньше 0.75.
+The model must achieve an F1 score of at least 0.75.  
 
-## Выводы
-Для прогнозирования токсичности комментариев в работе была рассмотрена работа моделей Логистическая регрессия, Дерево решений и Случайный лес.
+## Conclusions  
 
-Предварительно текст был лемматизирован и очищен. Затем векторизирован и предобработан с помощью модели BERT. Обучение моделей производилось до применения BERT и после.
-Стоит заметить, что предобработка с помощью BERT и дальнейшее предсказания производились на части данных, т.к. создание эмбедингов на полных данных на имеющихся мощностях компьютера занимает весьма продолжительное время. В связи с этим, с целью рассмотреть качество моделей с BERT в работе была рассмотрена выборка в 1000 элементов (создание эмбедингов заняла 42 мин).
+To predict the toxicity of comments, models such as Logistic Regression, Decision Tree, and Random Forest were evaluated.  
 
-Модели после подготовки признаков с помощью BERT обучаются в разы быстрее. Однако, при этом F1 мера моделей получается гораздо ниже. Скорее всего, это связано с тем, что данные для BERT взяты не полные.
+The text was preprocessed through lemmatization and cleaning, then vectorized and preprocessed using the BERT model. Training was performed both before and after applying BERT.  
 
-## Используемые библиотеки
-*Pandas*
-*Nltk*
-*Numpy*
-*Re*
-*Torch*
-*Transformers*
+It is worth noting that preprocessing with BERT and subsequent predictions were conducted on a subset of the data due to the time required to generate embeddings on the full dataset with the available computational resources. For this reason, the quality of models with BERT was evaluated using a sample of 1,000 entries (embedding generation took 42 minutes).  
 
-## Используемые модели
-*BERT*
-*LogisticRegression*
-*DecisionTreeClassifier*
-*RandomForestClassifier*
+Models trained after feature preparation with BERT learned significantly faster. However, their F1 scores were notably lower, likely due to the incomplete dataset used for BERT preprocessing.  
+
+## Libraries Used  
+
+*Pandas*  
+*Nltk*  
+*Numpy*  
+*Re*  
+*Torch*  
+*Transformers*  
+
+## Models Used  
+
+*BERT*  
+*LogisticRegression*  
+*DecisionTreeClassifier*  
+*RandomForestClassifier*  
